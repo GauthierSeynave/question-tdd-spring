@@ -18,8 +18,12 @@ public class QuestionServiceImpl implements QuestionService {
 	@Override
 	public Question nouvelleQuestion(NouvelleQuestion nouvelleQuestion) {
 		Question question = new Question();
-		question.setTitre(nouvelleQuestion.getQuestion());
+		question.setTitre(alimentationTitre(nouvelleQuestion));
 		return question;
+	}
+	
+	public String alimentationTitre(NouvelleQuestion nouvelleQuestion) {
+		return nouvelleQuestion.getQuestion();
 	}
 
 	@Override
