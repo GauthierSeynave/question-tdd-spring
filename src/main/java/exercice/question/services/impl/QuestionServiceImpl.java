@@ -17,8 +17,9 @@ public class QuestionServiceImpl implements QuestionService {
 	
 	@Override
 	public Question nouvelleQuestion(NouvelleQuestion nouvelleQuestion) {
-		// TODO Auto-generated method stub
-		return null;
+		Question question = new Question();
+		question.setTitre(nouvelleQuestion.getQuestion());
+		return question;
 	}
 
 	@Override
